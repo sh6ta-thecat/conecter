@@ -1,0 +1,130 @@
+body{
+    background: var(--fondo-);
+}
+h1{
+    color: #fff;
+}
+.body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+/* header*/
+.cabecera{
+    z-index: 999;
+    width: 100%;
+    height: 56px;
+    background: #19191a;
+    padding: 5px;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid var(--content-);
+    position: fixed;
+    & .header{
+    max-width: 960px;
+    margin: 0 auto;
+        & .header_bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+            & .left{
+    align-items: center;
+    display: flex;
+    position: relative;
+    top:10px;
+                & img{
+                    cursor: pointer;
+    margin-right: 120px;
+    width: 30px;
+    height: 30px;
+                }
+                &
+    a{
+                    padding-left: 30px;
+    font-size: 20px;
+    color:#fff;
+                }
+    }
+            & .right{
+                &
+                input{
+                    width: 15pc;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+    top: 10px;
+    background:var(--input-) url(http://localhost/conecter/images/search.ico) no-repeat;
+    background-position: 14px;
+    background-size: 13px 15px;
+    outline: none;
+                }
+            }
+            & .right input[type="text"]{
+                padding-left: 30px;
+                color: #e1e3e6;
+            }
+        }
+    }
+}
+/* hrader fin*/
+.container{
+    padding-top: 70px;
+    width: 900px;
+    display: flex;
+}
+.barra_lateral{
+    padding-top: 20px;
+    width: 270px;
+    & .profile{
+        display: inline-flex;
+        & .photo{
+            width: 36px;
+            height: 36px;
+            overflow: hidden;
+            border: 2px solid var(--content-);
+            border-radius: 100%;
+            &
+            img{
+                width: 100%;
+            height: 100%;
+            object-fit: cover;
+            }
+        }
+        & .nombre,a{
+            color: #fff;
+            font-size: 18px;
+            font-weight: 500;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+    }
+    & .option{
+        padding-top: 20px;
+        padding-left: 5px;
+        & .opt{
+            padding: 5px;
+            width: 13pc;
+            border-radius: 8px;
+            & a{
+                display: inline-flex;
+            }
+            & img{
+                padding-top:8px;
+                width: 20px;
+            }
+        }
+        & .opt:hover{
+            background: #19191a;
+        }
+        & .op{
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            padding: 10px;
+        }
+    }
+    
+}
