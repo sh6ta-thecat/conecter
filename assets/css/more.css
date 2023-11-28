@@ -1,0 +1,14 @@
+*{
+    --content-:#333;
+    --fondo-:#0a0a0a;
+    --blanc-:#fff;
+    --input-:#363738;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
