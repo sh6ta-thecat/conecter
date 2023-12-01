@@ -18,4 +18,18 @@
             align-items: center;
         }
     }
+    & .description{
+        color: var(--blanc-);
+        display: inline-flex;
+        width: 100%;
+        & .names{
+            width: 50%;
+            & a{
+                color: #46acdb;
+            }
+        }
+        & .cargos{
+            width: 50%;
+        }
+    }
 }

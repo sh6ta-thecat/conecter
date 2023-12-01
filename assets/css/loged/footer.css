@@ -1,0 +1,18 @@
+.footer{
+    & ul{
+        & li{
+            font-size: 15px;
+            display: inline-flex;
+        }
+        & li a{
+            color: var(--blanc-);
+        }
+        & li a:hover{
+            text-decoration: none;
+        }
+        & li:not(:last-child)::after{
+            content: "/";
+            color: white;
+        }
+    }
+}
