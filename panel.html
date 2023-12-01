@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tour</title>
+    <title>Panel</title>
     <link rel="stylesheet" href="assets/css/loged/style.css">
-    <link rel="stylesheet" href="assets/css/tour/style.css">
+    <link rel="stylesheet" href="assets/css/panel/style.css">
     <link rel="stylesheet" href="assets/css/more.css">
     <link rel="stylesheet" href="assets/css/loged/footer.css">
 </head>
@@ -114,38 +114,31 @@
                 </div>
             </div>
             <div class="contenedor">
-               
-                <div class="contitle">
-                    <div class="tour">
-                        <h1>Un tour por conecter - <spain id="tabTitle">Empezando</spain></h1>
-                    </div>
-                </div>
                   <!-- Zona de ventanas -->
                   <div class="tabs">
-                    <input type="radio" class="tabs__radio" name="tabs-example" id="empezando" checked>
-                    <label for="empezando" class="tabs__label">Empezando</label>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="panel" checked>
+                    <label for="panel" class="tabs__label">Panel</label>
                     <div class="tabs__content">
                         <div class="contour">
-                            <div class="title">
-                                <h1>Comienze en coneCter</h1>
+                            <div class="profile">
+                                <div class="foto">
+                                    <img src="http://localhost/conecter/user/zuck@carlos/gato.png" alt="foto de usuario">
+                                </div>
                             </div>
                             <div></div>
                             <div class="content">
                                 <div class="description">
-                                    coneCter es un red que se compone de una red institucional, se basa en categorisar las carreras.
-                                    <div class="img">
-                                        <img src="" alt="Regitro en coneCter">
-                                    </div>
-                                    <div class="title">No cualquiera puede Registrarse</div>
-                                    Si desea ver los perfiles de sus compañeros de clase o carrera, incluso a tus amigos en el sitio, asegurece de utiilizar el correo institucional para registrarse. <br>
-                                    Si intenta registrarse en coneCter con un correo falso, eso no le servira, por que le enviamos un codigo de verificación a su correo institucional. <br>
-                                    Vamos registrese y sepa cuales de sus amigos se encuentran en coneCter.
+                                    Estas conectado con [nn] personas atraves de tu red.
+                                    <p></p>
+                                    Estas conectado con [nn] personas atraves de tus amigos.
+                                    <p></p>
+                                    Estas conectado con [nn] personas atraves de tu carrera.
                                 </div>
                             </div>
                         </div>
                       </div>
-                    <input type="radio" class="tabs__radio" name="tabs-example" id="perfil">
-                    <label for="perfil" class="tabs__label">Perfil</label>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="explore">
+                    <label for="explore" class="tabs__label">Explorar</label>
                     
                     <div class="tabs__content">
                         <div class="contour">
@@ -169,8 +162,8 @@
                             </div>
                         </div>
                     </div>
-                    <input type="radio" class="tabs__radio" name="tabs-example" id="panel">
-                    <label for="panel" class="tabs__label">Panel</label>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="amigos">
+                    <label for="amigos" class="tabs__label">Amigos</label>
                     
                     <div class="tabs__content">
                         <div class="contour">
@@ -195,8 +188,8 @@
                             </div>
                         </div>
                     </div>
-                    <input type="radio" class="tabs__radio" name="tabs-example" id="Grupos">
-                    <label for="Grupos" class="tabs__label">Grupos</label>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="grupos">
+                    <label for="grupos" class="tabs__label">Grupos</label>
                     
                     <div class="tabs__content">
                         <div class="contour">
@@ -228,6 +221,6 @@
         </div>
         </div>
     </div>
-    <script src="assets/js/ventanas.js"></script>
+    <script src="assets/js/panel/panel.js"></script>
 </body>
 </html>
