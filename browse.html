@@ -1,13 +1,14 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Panel</title>
     <link rel="stylesheet" href="assets/css/loged/style.css">
-    <link rel="stylesheet" href="assets/css/loged/leftnav.css">
+    <link rel="stylesheet" href="assets/css/browse/style.css">
     <link rel="stylesheet" href="assets/css/more.css">
-    <link rel="stylesheet" href="assets/css/profile/style.css">
+    <link rel="stylesheet" href="assets/css/loged/footer.css">
 </head>
 <body>
     <div class="body">
@@ -116,40 +117,98 @@
                 </div>
                 </div>
             </div>
-            <div class="contenido">
-                <div class="photo">
-                    <div class="portada">
-                            <img src="http://localhost/conecter/images/logo_conecter2.png" alt="">
-                    </div>
-                    <div class="infor">
-                        <div class="inf">
-                            <div class="username">
-                                <span>Username</span>
-                            </div>
-                            <div class="usermore">
-                                <div class="more">
-                                    <img src="http://localhost/conecter/images/chat.png" alt="Icono de 'carrera'">
-                                        <span>Información</span>
+            <div class="contenedor">
+                  <!-- Zona de ventanas -->
+                  <div class="tabs">
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="extendida" checked>
+                    <label for="extendida" class="tabs__label">Extendida</label>
+                    <div class="tabs__content">
+                        <div class="contour">
+                            <div class="content">
+                                <div class="title">
+                                    <h1>Red extendida</h1>
+                                    <span>Se muestran a todos los usuarios de coneCter</span>
                                 </div>
-                                <div class="carrera">
-                                    <div class="icon_carr">
-                                        <img src="http://localhost/conecter/images/chat.png" alt="Icono de 'carrera'">
-                                        <span title="Arquitectura de Plataformas y Servicios en las Tecnologias de la Información">APSTI</span>  
+                                <div></div>
+                                <div class="description">
+                                </div>
+                            </div>
+                        </div>
+                      </div>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="personal">
+                    <label for="personal" class="tabs__label">Personal</label>
+                    
+                    <div class="tabs__content">
+                        <div class="contour">
+                            <div class="title">
+                                <h1>Red personal</h1>
+                                <span>Se muestran a todos tus amigos</span>
+                            </div>
+                            <div></div>
+                            <div class="content">
+                                <div class="description">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="estudio">
+                    <label for="estudio" class="tabs__label">Estudio</label>
+                    
+                    <div class="tabs__content">
+                        <div class="contour">
+                            <div class="title">
+                                <h1>Red de estudio</h1>
+                                <span>Se muestran a los usuarios de tu salon</span>
+                            </div>
+                            <div></div>
+                            <div class="content">
+                                <div class="description">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="radio" class="tabs__radio" name="tabs-example" id="carrera">
+                    <label for="carrera" class="tabs__label">Carrera</label>
+                    
+                    <div class="tabs__content">
+                        <div class="contour">
+                            <div class="title">
+                                <h1>Red de carrera</h1>
+                                <span>Se muestran a los usuarios de tu carrera</span>
+                                <div class="user">
+                                    <div class="foto">
+                                        <div class="img">
+                                            <img src="http://localhost/conecter/user/zuck@carlos/gato.png" alt="">
+                                        </div>
                                     </div>
+                                    <div class="info">
+                                        <div class="ulinfo">
+                                            <ul>
+                                                <li>Nombre:<a href=""></a></li>
+                                                <li>Carrera:<a href=""></a></li>
+                                                <li>Sexo:<a href=""></a></li>
+                                                <li>Año<a href=""></a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="opc"></div>
                                 </div>
-                                
+                            </div>
+                            <div></div>
+                            <div class="content">
+                                <div class="description">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="foto">
-                        <div class="myfoto">
-                            <img src="http://localhost/conecter/user/zuck@carlos/gato.png" alt="">
-                        </div>
-                        <div class="conexion"></div>
-                    </div>
-                </div>
-            </div>
+                  </div>
+                          
+                <!--find de zonas de ventanas-->
+            
+                
+        </div>
         </div>
     </div>
+    <script src="assets/js/panel/panel.js"></script>
 </body>
 </html>

@@ -67,6 +67,13 @@
     color: #fff;
                 
             }
+            & .usermore{
+                display: inline-flex;
+                align-items: center;
+            }
+            & .usermore>.more+.carrera{
+                padding: 20px;
+            }
             & .usermore
     img{
                 position: relative;
