@@ -1,51 +1,38 @@
-// Función para abrir el modal específico según el número
-function openModal(modalNumber) {
-    const modal = document.getElementById(`myModal${modalNumber}`);
-    modal.style.display = 'block';
-
-    // Obtener el video y su duración correspondiente
-    const video = document.getElementById(`videoPlayer${modalNumber}`);
-    const durationDisplay = document.getElementById(`duration${modalNumber}`);
-
-    video.onloadedmetadata = function() {
-        let duration = video.duration;
-        let minutes = Math.floor(duration / 60);
-        let seconds = Math.floor(duration % 60);
-        let formattedDuration = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-        
-        durationDisplay.textContent = formattedDuration;
-    };
-}
-
-// Función para cerrar el modal específico según el número
-function closeModal(modalNumber) {
-    const modal = document.getElementById(`myModal${modalNumber}`);
-    modal.style.display = 'none';
-}
-
-// Cerrar el modal al hacer clic fuera del área del video
-window.onclick = function(event) {
-    // Verificar si se hizo clic fuera de algún modal
-    const modals = document.querySelectorAll('.modal');
-    modals.forEach(function(modal) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
+const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalVideo = document.getElementById('modal-video');
+    const modalInfo = document.getElementById('modal-info');
+    const closeModal = document.querySelector('.close');
+    
+    const contents = document.querySelectorAll('.imgcontent, .videocontent');
+    
+    contents.forEach(content => {
+      content.addEventListener('click', () => {
+        const dataType = content.querySelector('img, video').getAttribute('data-type');
+        const dataSrc = content.querySelector('img, video').getAttribute('data-src');
+        const altText = content.querySelector('img, video').getAttribute('alt');
+    
+        if (dataType === 'image') {
+          modalImage.style.display = 'block';
+          modalImage.src = dataSrc;
+          modalVideo.style.display = 'none';
+        } else {
+          modalVideo.style.display = 'block';
+          modalVideo.src = dataSrc;
+          modalImage.style.display = 'none';
         }
+    
+        modalInfo.textContent = `Archivo: ${altText}`;
+        modal.style.display = 'block';
+      });
     });
-};
-
-// Ejecutar al cargar la página para obtener las duraciones de los videos
-document.addEventListener('DOMContentLoaded', function() {
-    const videos = document.querySelectorAll('video');
-    videos.forEach(function(video, index) {
-        video.onloadedmetadata = function() {
-            const durationDisplay = document.getElementById(`duration${index + 1}`);
-            let duration = video.duration;
-            let minutes = Math.floor(duration / 60);
-            let seconds = Math.floor(duration % 60);
-            let formattedDuration = (minutes < 10 ? '0' : '') + minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-        
-            durationDisplay.textContent = formattedDuration;
-        };
+    
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
     });
-});
+    
+    window.addEventListener('click', event => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
